@@ -10,15 +10,28 @@
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Data Pasien</a>
-        <div class="collapse navbar-collapse">
-            <ul class="ml-auto navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="{{ route('patients.index') }}">Home</a></li>
-            </ul>
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('/') }}">Aplikasi Pasien</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="ml-auto navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('patients.index') }}">Data Pasien</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('patients.create') }}">Tambah Pasien</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
+    <!-- Konten Halaman -->
     <div class="container mt-4">
         @yield('content')
     </div>
